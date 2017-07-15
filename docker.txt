@@ -1,0 +1,6 @@
+images: An image is an inert, immutable, file that's essentially a snapshot of a container. It will produce a container when started with run. 
+containers: A container is a runtime instance of image(lightweighted and portable encapsulations of an environment in which to run applications).
+Always remove a useless, stopped container with "docker rm [CONTAINER_ID]".
+Always remove the image behind a useless, stopped container with "docker rmi [IMAGE_ID]".
+Each docker image references a list of read-only layers that represent filesystem differences. Layers are stacked on top of each other to form a base for a container's root filesystem.
+When a new container is created, a new, thin writable layer is added to on the top of underlying stack.
